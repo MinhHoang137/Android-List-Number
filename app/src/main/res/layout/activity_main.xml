@@ -9,53 +9,47 @@
 
     <EditText
         android:id="@+id/InputNumber"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="17dp"
         android:ems="10"
         android:hint="Enter a number..."
         android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/ShowNumber"
-        android:layout_width="414dp"
-        android:layout_height="447dp"
-        android:layout_marginTop="98dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputNumber"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/ShowButton" />
 
     <Button
         android:id="@+id/ShowButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Show"
-        app:layout_constraintBottom_toTopOf="@+id/ShowNumber"
-        app:layout_constraintStart_toStartOf="@+id/AttibuteGroup" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AttibuteGroup" />
 
     <TextView
         android:id="@+id/Error"
         android:layout_width="278dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="27dp"
-        android:layout_marginTop="175dp"
-        android:layout_marginBottom="29dp"
         android:text="Error"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/ShowNumber"
         app:layout_constraintStart_toEndOf="@+id/ShowButton"
-        app:layout_constraintTop_toBottomOf="@+id/InputNumber" />
+        app:layout_constraintTop_toTopOf="@+id/ShowButton" />
 
     <RadioGroup
         android:id="@+id/AttibuteGroup"
-        android:layout_width="143dp"
-        android:layout_height="146dp"
-        app:layout_constraintBottom_toTopOf="@+id/ShowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@+id/InputNumber"
         app:layout_constraintTop_toBottomOf="@+id/InputNumber">
 
