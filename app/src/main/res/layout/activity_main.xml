@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/InputNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:hint="Enter a number..."
+        android:inputType="numberSigned"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ShowNumber"
+        android:layout_width="414dp"
+        android:layout_height="447dp"
+        android:layout_marginTop="98dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InputNumber"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/ShowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show"
+        app:layout_constraintBottom_toTopOf="@+id/ShowNumber"
+        app:layout_constraintStart_toStartOf="@+id/AttibuteGroup" />
+
+    <TextView
+        android:id="@+id/Error"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="175dp"
+        android:layout_marginBottom="29dp"
+        android:text="Error"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/ShowNumber"
+        app:layout_constraintStart_toEndOf="@+id/ShowButton"
+        app:layout_constraintTop_toBottomOf="@+id/InputNumber" />
+
+    <RadioGroup
+        android:id="@+id/AttibuteGroup"
+        android:layout_width="143dp"
+        android:layout_height="146dp"
+        app:layout_constraintBottom_toTopOf="@+id/ShowButton"
+        app:layout_constraintStart_toStartOf="@+id/InputNumber"
+        app:layout_constraintTop_toBottomOf="@+id/InputNumber">
+
+        <RadioButton
+            android:id="@+id/Odd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Odd" />
+
+        <RadioButton
+            android:id="@+id/Even"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Even" />
+
+        <RadioButton
+            android:id="@+id/Square"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Square" />
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>
